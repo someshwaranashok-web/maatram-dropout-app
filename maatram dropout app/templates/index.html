@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Maatram - Student Entry</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Maatram Foundation — Add Student</h1>
+    <form action="{{ url_for('submit') }}" method="post" class="form">
+      <label>Name
+        <input type="text" name="name" required placeholder="Student name">
+      </label>
+
+      <label>Academic Score (0-100)
+        <input type="number" name="academic" min="0" max="100" value="50" required>
+      </label>
+
+      <label>Parent Monthly Income (INR)
+        <input type="number" name="parent_income" min="0" value="10000" required>
+      </label>
+
+      <label>Family Size (number of family members)
+        <input type="number" name="family_size" min="1" max="20" value="4" required>
+      </label>
+
+      <label>Motivation (1 low - 5 high)
+        <input type="range" name="motivation" min="1" max="5" value="3" oninput="this.nextElementSibling.value=this.value">
+        <output>3</output>
+      </label>
+
+      <label>Behavior
+        <select name="behavior">
+          <option value="3">Good</option>
+          <option value="2" selected>Average</option>
+          <option value="1">Weak</option>
+        </select>
+      </label>
+
+      <div class="buttons">
+        <button type="submit">Add Student & Compute Score</button>
+        <a class="btn-link" href="{{ url_for('dashboard') }}">Go to Dashboard</a>
+      </div>
+    </form>
+
+    <p class="hint">Tip: Add a few students, then open the dashboard to view scores & risks.</p>
+  </div>
+</body>
+</html>

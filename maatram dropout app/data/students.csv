@@ -1,0 +1,6 @@
+id,name,academic,parent_income,family_size,motivation,behavior,score,risk,reason,created_at
+1600000000,Asha,78,5000,5,4,3,78.2,Low Risk,No major concerns found,2025-11-21T00:00:00
+1600000100,Raju,45,8000,6,2,2,43.5,High Risk,Weak academic performance + Low motivation + Financial instability,2025-11-21T00:00:00
+1763759012,xxxx,50,10000,4,3,3,63.62,Medium Risk,No major concerns found,2025-11-22T02:33:32.310573
+1763759113,asha,50,10000,4,3,2,56.95,Medium Risk,No major concerns found,2025-11-22T02:35:13.824742
+1763759275,sample 1,70,20000,3,3,3,66.08,Medium Risk,No major concerns found,2025-11-22T02:37:55.319069

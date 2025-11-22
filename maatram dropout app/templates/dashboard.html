@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Maatram - Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Maatram Foundation — Dashboard</h1>
+    <div class="top-actions">
+      <a class="btn-link" href="{{ url_for('index') }}">Add Student</a>
+    </div>
+
+    <h2>Risk Distribution</h2>
+    <canvas id="riskChart" width="400" height="100"></canvas>
+
+    <h2>Students</h2>
+    <table id="studentsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Risk</th>
+          <th>Reason</th>
+          <th>Added</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
